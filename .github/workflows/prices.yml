@@ -7,6 +7,10 @@ on:
   schedule:
     - cron: "30 5 * * *" # 06:30 in Serbia in winter, 07:30 in summer
     - cron: "30 11 * * *"
+  # A change to the job publishes right away.
+  push:
+    branches: [main]
+    paths: [build-prices.mjs, .github/workflows/prices.yml]
   workflow_dispatch:
 
 permissions:
